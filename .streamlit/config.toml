@@ -1,0 +1,12 @@
+[theme]
+base = "dark"
+
+primaryColor = "#FF9900"
+
+font = "sans serif"
+
+[client]
+toolbarMode = "minimal"
+
+[server]
+maxMessageSize = 50
