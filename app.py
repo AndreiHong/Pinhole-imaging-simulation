@@ -1,6 +1,7 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import physics_engine as pe
+plt.rcParams['mathtext.fontset'] = 'cm' 
 
 # 图表字体与渲染配置
 plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei']
@@ -49,11 +50,11 @@ def plot_matrix(matrix, title):
     return fig
 
 with col1:
-    st.pyplot(plot_matrix(src_matrix, "光源 S(x,y)"))
+    st.pyplot(plot_matrix(src_matrix, "光源 $S(x,y)$"))
 with col2:
-    st.pyplot(plot_matrix(apt_matrix, "孔径透过率 A(x,y)"))
+    st.pyplot(plot_matrix(apt_matrix, "孔径面积 $A$"))
 with col3:
-    st.pyplot(plot_matrix(img_matrix, "像面光强 I(x,y)"))
+    st.pyplot(plot_matrix(img_matrix, "像面光强 $I(x,y)$"))
 
 # 系统状态输出
 st.markdown("---")
