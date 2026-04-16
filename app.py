@@ -1,10 +1,9 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import physics_engine as pe
-plt.rcParams['mathtext.fontset'] = 'cm' 
 
-# 图表字体与渲染配置
-plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei']
+plt.rcParams['mathtext.fontset'] = 'cm' 
+plt.rcParams['font.sans-serif'] = ['WenQuanYi Zen Hei', 'SimHei', 'Microsoft YaHei']
 plt.rcParams['axes.unicode_minus'] = False
 
 st.set_page_config(page_title="小孔成像仿真", layout="wide")
@@ -34,7 +33,7 @@ img_matrix = pe.compute_image_2d(src_matrix, apt_matrix)
 # 三维几何光路视图
 st.subheader("三维几何光路")
 fig_3d = pe.create_3d_ray_diagram(source_type, d1, d2, aperture_type, aperture_size)
-st.plotly_chart(fig_3d, use_container_width=True)
+st.plotly_chart(fig_3d, width='stretch')
 
 # 二维像面光强分布视图
 st.subheader("二维像面光强分布")
